@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import Navbar from '../components/common/Navbar'
-import Hero from '../components/landingComponents/Hero'
-import Features from '../components/landingComponents/Features'
-import FamousTrips from '../components/landingComponents/FamousTrips'
-import OurMission from '../components/landingComponents/OurMission'
-import Testimonials from '../components/landingComponents/Testimonials'
-import Footer from '../components/landingComponents/Footer'
+import Hero from "../components/landingComponents/Hero"
 import useAuth from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
+import Features from '../components/landingComponents/Features'
+import FamousTrips from '../components/landingcomponents/FamousTrips'
+import OurMission from '../components/landingcomponents/OurMission'
+import Testimonials from '../components/landingcomponents/Testimonials'
+import Footer from '../components/landingComponents/Footer'
 
 const Landing = () => {
 
@@ -25,7 +25,7 @@ const Landing = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero/>
       <Features />
       <FamousTrips />
       <OurMission />

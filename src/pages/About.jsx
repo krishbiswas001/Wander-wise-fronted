@@ -1,6 +1,4 @@
 import { MapPinned, Sparkles } from "lucide-react";
-import Navbar from "../components/common/Navbar";
-import Footer from "../components/landingComponents/Footer";
 import aboutCity from "../assets/about-city.png";
 
 const stats = [

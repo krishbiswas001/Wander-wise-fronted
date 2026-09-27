@@ -1,7 +1,8 @@
 import React from 'react'
 import AppNavbar from '../components/common/AppNavbar'
-import Footer from '../components/landingComponents/Footer'
 import { Outlet } from 'react-router-dom'
+import Footer from '../components/landingComponents/Footer'
+
 
 const AppLayouts = () => {
   return (

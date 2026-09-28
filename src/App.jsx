@@ -1,21 +1,22 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Landing from './pages/Landing'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Login from './pages/Login'
-import Register from './pages/Register'
 import useAuth from './hooks/useAuth'
 import { jwtDecode } from 'jwt-decode'
-import Dashboard from './pages/Dashboard'
-import AppLayouts from './layouts/AppLayouts'
-import Trip from './pages/trips/Trip'
-import AddTrip from './pages/trips/AddTrip'
-import TripDetails from './pages/trips/TripDetails'
-import EditTrip from './pages/trips/EditTrip'
-import Baggage from './pages/baggage/Baggage'
-import BaggageDetails from './pages/baggage/BaggageDetails'
-import AcceptInvitation from './pages/AcceptInvitation'
+
+const Landing = lazy(() => import('./pages/Landing'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
+const Login = lazy(() => import('./pages/Login'))
+const Register = lazy(() => import('./pages/Register'))
+const Dashboard = lazy(() => import('./pages/Dashboard'))
+const AppLayouts = lazy(() => import('./layouts/AppLayouts'))
+const Trip = lazy(() => import('./pages/trips/Trip'))
+const AddTrip = lazy(() => import('./pages/trips/AddTrip'))
+const TripDetails = lazy(() => import('./pages/trips/TripDetails'))
+const EditTrip = lazy(() => import('./pages/trips/EditTrip'))
+const Baggage = lazy(() => import('./pages/baggage/Baggage'))
+const BaggageDetails = lazy(() => import('./pages/baggage/BaggageDetails'))
+const AcceptInvitation = lazy(() => import('./pages/AcceptInvitation'))
 
 const App = () => {
 
@@ -54,7 +55,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
+      <Suspense fallback={null}>
+        <Routes>
 
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
@@ -76,7 +78,8 @@ const App = () => {
           <Route path="/trips/:id/invite/accept" element={<AcceptInvitation/>}/>
         </Route>
 
-      </Routes>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }

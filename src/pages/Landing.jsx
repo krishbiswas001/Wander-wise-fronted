@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import Navbar from '../components/common/Navbar'
-import Hero from "../components/landingComponents/Hero"
+import Hero from '../components/landingcomponents/Hero'
 import useAuth from '../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
-import Features from '../components/landingComponents/Features'
+import Features from '../components/landingcomponents/Features'
 import FamousTrips from '../components/landingcomponents/FamousTrips'
 import OurMission from '../components/landingcomponents/OurMission'
 import Testimonials from '../components/landingcomponents/Testimonials'
-import Footer from '../components/landingComponents/Footer'
+import Footer from '../components/landingcomponents/Footer'
 
 const Landing = () => {
 

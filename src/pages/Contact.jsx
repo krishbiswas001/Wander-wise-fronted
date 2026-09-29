@@ -1,4 +1,5 @@
 import React from 'react'
+import Pool from '../assets/Pool.jpg'
 import Navbar from '../components/common/Navbar'
 import { Button } from '../components/ui/button';
 import {
@@ -30,7 +31,7 @@ const Contact = () => {
           {/* card content */}
           <CardContent>
             <div className="h-40 w-full border flex items-center justify-center">
-              <img src="Pool.jpg" alt="pool" className="h-full w-full object-cover" />
+              <img src={Pool} alt="pool" className="h-full w-full object-cover" />
             </div>
 
             <h3>Mustang</h3>

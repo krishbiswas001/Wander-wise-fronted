@@ -59,10 +59,10 @@ const { onLogin } = useAuth();
 
   return (
     <div className="w-full min-h-dvh bg-emerald-800 flex items-center justify-center p-6">
-      <div className="w-full max-w-3xl bg-white rounded-lg grid grid-cols-2 overflow-hidden shadow-lg">
+      <div className="w-full lg:w-1/2 max-auto bg-white rounded-lg grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
 
         {/* Image side */}
-        <div className="hidden md:block h-full">
+        <div className=" w-full  hidden  overflow-hidden lg:block">
           <img
             src="https://images.unsplash.com/photo-1787514375953-85843e223871?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="hotel house italy"

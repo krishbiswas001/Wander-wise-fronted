@@ -35,13 +35,13 @@ const featuresData = [
 const Features = () => {
     const navigate = useNavigate();
   return (
-    <div className="px-20 py-20">
+    <div className="px-4 md:px-8 lg:px-20 py-24">
         {/* headings */}
         <div>
         <h2 onClick={()=>{navigate("/features")}} className="text-4xl font-bold text-center  cursor-pointer">Features</h2>
         </div>
         {/* content */}
-        <div className="grid grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
       {
         featuresData.map((feature, index) => {
             return (
